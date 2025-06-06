@@ -1,0 +1,190 @@
+nav {
+  background-color: #793018;
+  position: fixed;
+  right: 0;
+  top: 0;
+  width: 130px;
+  height: 100%;
+  border: 1px #d4a564 solid;
+  box-shadow: -2px 0 7px #333;
+  z-index: 9999;
+}
+
+.list svg,
+.list i {
+  color: #d4a564;
+  cursor: pointer;
+}
+
+.list svg:hover,
+.list i:hover {
+  color: #ce8825;
+  transform: scale(1.1);
+}
+
+#li1 {
+  position: fixed;
+  right: 30px;
+  top: 5px;
+  padding: 12px;
+  border: 3px #d4a564 solid;
+}
+
+#li2 {
+  position: fixed;
+  right: 40px;
+  top: 135px;
+}
+
+#li3 {
+  position: fixed;
+  right: 40px;
+  top: 315px;
+}
+
+#li4 {
+  position: fixed;
+  right: 40px;
+  top: 225px;
+}
+
+.srch {
+  position: absolute;
+  top: 6px;
+  right: 135px;
+  z-index: 999;
+}
+
+#cardDetailModal .modal-content,
+#addCardModal .modal-content {
+  background-color: #fdf4ec;
+  border: 2px solid #d4a564;
+}
+
+#cardDetailModal .modal-header,
+#addCardModal .modal-header {
+  background-color: #793018;
+  color: #fff;
+  position: sticky;
+  top: 0;
+  z-index: 2;
+}
+
+#cardDetailModal .modal-body {
+  display: flex;
+  gap: 15px;
+  max-height: 60vh;
+  overflow-y: auto;
+}
+
+#cardDetailModal img {
+  max-width: 250px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+}
+
+#ltr {
+  background-color: #793018;
+  color: #fff;
+  position: relative;
+  right: 390px;
+}
+
+#h5 {
+  margin: 5px;
+}
+
+#fermer {
+  position: absolute;
+  right: 450px;
+}
+
+i {
+  font-size: 40px;
+}
+
+i:hover {
+  font-size: 42px;
+}
+
+li {
+  list-style: none;
+}
+
+#overlay {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 5000;
+  display: none;
+}
+
+.card .delete-single-btn {
+  display: none; 
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background-color: red;
+  color: white;
+  border: none;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  line-height: 1;
+  cursor: pointer;
+  z-index: 10;
+}
+
+body.show-delete-btns .card .delete-single-btn {
+  display: flex;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+#cardContainer .card {
+  max-width: 100%;
+}
+
+@media (max-width: 576px) {
+  #cardContainer .col-auto {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  #cardContainer .card {
+    width: 100%;
+    height: auto;
+  }
+
+  #cardContainer .card img {
+    height: 200px;
+  }
+}
+
+#overlay-delete {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4); 
+  z-index: 4000;
+  display: none;
+}
+
+body.show-delete-btns #overlay-delete {
+  display: block;
+}
+
+body.show-delete-btns .card .delete-single-btn {
+  display: flex;
+  z-index: 5000; 
+}
